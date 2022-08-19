@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 1280px;
+            padding: 0 100px;
+            background-color: bisque;
+        }
+
+        .box {
+            position: relative;
+            width: 1280px;
+            height: 851px;
+            margin: 0 auto;
+            margin-top: 100px;
+            overflow: hidden;
+        }
+
+        .line1 {
+            position: absolute;
+            bottom: 120px;
+            left: 220px;
+            width: 200px;
+            height: 40px;
+            background-color: #fff;
+            transform: rotate(23deg) skew(-55deg);
+            opacity: .4;
+            animation: yd1 .25s linear .2s infinite;
+        }
+
+        .line2 {
+            position: absolute;
+            bottom: 50px;
+            left: 890px;
+            width: 250px;
+            height: 35px;
+            background-color: #fff;
+            transform: rotate(19deg) skew(-60deg);
+            opacity: .4;
+            animation: yd2 .25s linear .2s infinite;
+        }
+
+
+        @keyframes yd1 {
+            0% {
+                transform: rotate(23deg) skew(-55deg) translateX(300px);
+                animation-timing-function: ease-out;
+            }
+
+            25% {
+                transform: rotate(23deg) skew(-55deg) translateX(200px);
+                animation-timing-function: linear;
+            }
+
+            75% {
+                transform: rotate(23deg) skew(-55deg) translateX(0px);
+                animation-timing-function: ease-in-out;
+            }
+
+            100% {
+                transform: rotate(23deg) skew(-55deg) translateX(-400px);
+                animation-timing-function: ease-out;
+                opacity: 0;
+            }
+        }
+
+        @keyframes yd2 {
+            0% {
+                transform: rotate(19deg) skew(-60deg) translateX(400px);
+                animation-timing-function: ease-out;
+            }
+
+            25% {
+                transform: rotate(19deg) skew(-60deg) translateX(200px);
+                animation-timing-function: linear;
+            }
+
+            75% {
+                transform: rotate(19deg) skew(-60deg) translateX(0px);
+                animation-timing-function: ease-in-out;
+
+            }
+
+            100% {
+                transform: rotate(19deg) skew(-60deg) translateX(-400px);
+                animation-timing-function: ease-out;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="./car.png" alt="">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+</body>
+
+</html>
